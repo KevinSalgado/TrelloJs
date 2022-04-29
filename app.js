@@ -8,11 +8,12 @@ let Trello = require("trello");
 let trello = new Trello(process.env.KEY, process.env.TOKEN);
 
 let cardTitle = `Card Nueva ${new Date()}`;
+const myListId = "626c191d7b16084f347a3e28";
 
 trello.addCard(
   cardTitle,
   "LaunchX Card Description",
-  "6264e42be72d295e64f5c083",
+  myListId,
   function (error, trelloCard) {
     if (error) {
       console.log("Could not add card:", error);
